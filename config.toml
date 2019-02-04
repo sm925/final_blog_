@@ -15,7 +15,7 @@
 baseURL = "https://example.org/"
 languageCode = "en-us"
 defaultContentLanguage = "en-us"
-title = "Hugo tranquilpeak theme"
+#title = "Hugo tranquilpeak theme"
 theme = "hugo-tranquilpeak-theme"
 disqusShortname = "hugo-tranquilpeak-theme"
 # googleAnalytics = "UA-123-45"
@@ -31,15 +31,15 @@ canonifyurls = true
   archive = "archives"
 
 [author]
-  name = "Firstname Lastname"
-  bio = "Super bio with markdown support **COOL**"
-  job = "Your job title"
-  location = "France"
+  name = "Suchait Mattoo"
+  bio = "Data Science Enthusiast, Crossfit Athlete"
+  job = "Data Scientist"
+  location = "Boston"
   # Your Gravatar email. Overwrite `author.picture` everywhere in the blog
-  gravatarEmail = "thibaud.lepretre@gmail.com"
+  #gravatarEmail = "thibaud.lepretre@gmail.com"
   # Your profile picture
   # Overwritten by your gravatar image if `author.gravatarEmail` is filled
-  picture = "https://cdn1.iconfinder.com/data/icons/ninja-things-1/1772/ninja-simple-512.png"
+  #picture = "https://cdn1.iconfinder.com/data/icons/ninja-things-1/1772/ninja-simple-512.png"
   # Your Twitter username without the @. E.g : thibaudlepretre
   # twitter = "thibaudlepretre"
   # Your google plus profile id. E.g : +ThibaudLepretre or 114625208755123718311
@@ -79,17 +79,23 @@ canonifyurls = true
 
 [[menu.links]]
   weight = 1
+  identifier = "linkedin"
+  name = "Linkedin"
+  pre = "<i class=\"sidebar-button-icon fa fa-lg fa-linkedin\"></i>"
+  url = "https://linkedin.com/in/suchait-mattoo-22695893"
+[[menu.links]]
+  weight = 2
   identifier = "github"
   name = "GitHub"
   pre = "<i class=\"sidebar-button-icon fa fa-lg fa-github\"></i>"
-  url = "https://github.com/kakawait"
+  url = "https://github.com/sm925"
 [[menu.links]]
-  weight = 2
+  weight = 3
   identifier = "stackoverflow"
   name = "Stack Overflow"
   pre = "<i class=\"sidebar-button-icon fa fa-lg fa-stack-overflow\"></i>"
-  url = "https://stackoverflow.com/users/636472/kakawait"
-
+  url = "https://stackoverflow.com/users/5269047/samadhi"
+  
 [[menu.misc]]
   weight = 1
   identifier = "rss"
