@@ -1,0 +1,85 @@
+---
+title: 'Imdb Top 250 TV Shows '
+author: Suchait Mattoo
+date: '2019-02-09'
+slug: imdb-top-250-tv-shows
+categories: []
+tags: []
+keywords:
+  - tech
+---
+
+
+
+<!--more-->
+<div id="web-scraping-of-an-imdb-web-page" class="section level2">
+<h2>Web Scraping of an Imdb Web Page</h2>
+<pre class="r"><code>## loading all the packages required:
+library(rvest)</code></pre>
+<pre><code>## Loading required package: xml2</code></pre>
+<pre class="r"><code>library(splitstackshape)
+library(tidyr)
+library(data.table)
+library(ggplot2)
+library(scales)</code></pre>
+</div>
+<div id="scraping-and-data-preparation-for-a-ranking-graph" class="section level1">
+<h1>Scraping and data preparation for a ranking graph</h1>
+<pre class="r"><code>url &lt;- &#39;https://www.imdb.com/chart/toptv/?ref_=nv_tvv_250&#39; # specifying url of a website to be scraped
+
+webpage &lt;- read_html(url) # reading the HTML code from website
+
+rank_data_html &lt;- html_nodes(webpage,&#39;.imdbRating , .titleColumn , .velocity&#39;) # using css selector to scrap data
+
+rank_data &lt;- html_text(rank_data_html) # Converting the ranking data to text
+
+head(rank_data) # check how data looks</code></pre>
+<pre><code>## [1] &quot;\n      1.\n      Planet Earth II\n        (2016)\n    &quot; 
+## [2] &quot;\n            9.5\n    &quot;                                 
+## [3] &quot;\n      2.\n      Band of Brothers\n        (2001)\n    &quot;
+## [4] &quot;\n            9.5\n    &quot;                                 
+## [5] &quot;\n      3.\n      Game of Thrones\n        (2011)\n    &quot; 
+## [6] &quot;\n            9.4\n    &quot;</code></pre>
+<div id="data-cleaning-and-preparing-for-a-ranking-graph" class="section level2">
+<h2>Data cleaning and preparing for a ranking graph</h2>
+<pre class="r"><code>rank_data &lt;- gsub(&quot;\n&quot;,&quot;&quot;, rank_data) # data-Preprocessing: removing \n
+rank_data &lt;- gsub(&quot; &quot;,&quot;&quot;,rank_data) # removing excess spaces
+head(rank_data) # another look at the genre data</code></pre>
+<pre><code>## [1] &quot;1.PlanetEarthII(2016)&quot;  &quot;9.5&quot;                   
+## [3] &quot;2.BandofBrothers(2001)&quot; &quot;9.5&quot;                   
+## [5] &quot;3.GameofThrones(2011)&quot;  &quot;9.4&quot;</code></pre>
+</div>
+<div id="preparation-contd." class="section level2">
+<h2>Preparation Contd.</h2>
+<pre class="r"><code>df &lt;- data.frame(Rank = rank_data) # creating a data frame
+df &lt;- cbind(head(df,-1), tail(df,-1)) # binding tv show and rankings
+required &lt;- seq(1, nrow(df), 2)
+df &lt;- df[required, ]
+colnames(df)[[2]] &lt;- &quot;imdb_rating&quot; # changing column name
+df &lt;- df %&gt;% separate(Rank, into = c(&#39;rank&#39;, &#39;tv_show&#39;), sep = 2) # seperating rank and tv show
+df &lt;- cSplit(df, &quot;tv_show&quot;, &quot;(&quot;) # splitting year into a different column
+setDT(df) # converting to dat.table
+setnames(df, &quot;tv_show_1&quot;, &quot;tv_show&quot;) # changing old column names to new ones
+setnames(df, &quot;tv_show_2&quot;, &quot;year&quot;)
+df[, year := gsub(&quot;)&quot;, &quot;&quot;, year)][, rank := 1:.N][, tv_show := as.character(tv_show)][, tv_show := ifelse(substr(tv_show, 1, 1) == &quot;.&quot;, sub(&quot;\\.&quot;, &quot;&quot;, tv_show), tv_show)] # changing data type of the columns and removing . from tv shows
+df &lt;- df[, c(&quot;rank&quot;, &quot;tv_show&quot;, &quot;imdb_rating&quot;, &quot;year&quot;)] # setting a column order
+df[, tv_show := ifelse(substr(tv_show, 2, 2) == &quot;.&quot;, gsub(&quot;^[^.]*.&quot;, &quot;&quot;, tv_show), tv_show)] # few tv shows still have . and number in it, cleaning it
+rm(list=setdiff(ls(), &quot;df&quot;)) # cleaning global dir
+df &lt;- cbind(df, as.numeric(as.character(factor(df$imdb_rating)))) # rating column to numeric
+df[, imdb_rating := NULL] # deleting column
+setnames(df, &quot;V2&quot;, &quot;imdb_rating&quot;)
+df[, year := NULL]
+head(df) # peek into final prepared data for a graph</code></pre>
+<pre><code>##    rank        tv_show imdb_rating
+## 1:    1  PlanetEarthII         9.5
+## 2:    2 BandofBrothers         9.5
+## 3:    3  GameofThrones         9.4
+## 4:    4    PlanetEarth         9.4
+## 5:    5    BreakingBad         9.4
+## 6:    6        TheWire         9.3</code></pre>
+</div>
+<div id="plotting-into-a-dot-ranking-graph" class="section level2">
+<h2>Plotting into a dot ranking graph</h2>
+<p><img src="/post/2019-02-09-imdb-top-250-tv-shows_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+</div>
+</div>
