@@ -523,6 +523,23 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eget urna vitae v
           <div class="media">
             
             <div class="media-body">
+              <a class="link-unstyled" href="/2019/02/imdb-top-250-tv-shows/">
+                <h3 class="media-heading">Imdb Top 250 TV Shows </h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Feb 2, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather">HUGOMORE42 Web Scraping of an Imdb Web Page ## loading all the packages required: library(rvest) ## Loading required package: xml2 library(splitstackshape) library(tidyr) library(data.table) library(ggplot2) library(scales)  Scraping and data preparation for a ranking graph url &lt;- &#39;https://www.imdb.com/chart/toptv/?ref_=nv_tvv_250&#39; # specifying url of a website to be scraped webpage &lt;- read_html(url) # reading the HTML code from website rank_data_html &lt;- html_nodes(webpage,&#39;.imdbRating , .titleColumn , .velocity&#39;) # using css selector to scrap data rank_data &lt;- html_text(rank_data_html) # Converting the ranking data to text head(rank_data) # check how data looks ## [1] &quot;\n 1.</div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
               <a class="link-unstyled" href="/2015/07/hello-r-markdown/">
                 <h3 class="media-heading">Hello R Markdown</h3>
               </a>
@@ -563,7 +580,7 @@ summary(cars) ## speed dist ## Min. : 4.0 Min. : 2.00 ## 1st Qu.:12.0 1st Qu.: 2
          data-message-zero="no post found"
          data-message-one="1 post found"
          data-message-other="{n} posts found">
-         2 posts found
+         3 posts found
       </p>
     </div>
   </div>
