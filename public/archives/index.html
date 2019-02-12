@@ -209,23 +209,12 @@
         <ul class="archive-posts archive-month" data-date="201902">
           <h5 class="archive-title" style="text-decoration: none;">February</h5>
           
-            <li class="archive-post archive-day" data-date="20190209">
-              <a class="archive-post-title" href="/2019/02/imdb-top-250-tv-shows/">Imdb Top 250 TV Shows </a>
+            <li class="archive-post archive-day" data-date="20190212">
+              <a class="archive-post-title" href="/2019/02/automl-in-h2o-r/">AutoML in H2o R</a>
             </li>
           
-        </ul>
-      
-    </div>
-  
-    
-    <div class="archive archive-year box" data-date="0001">
-      <h4 class="archive-title" style="text-decoration: none;">0001</h4>
-      
-        <ul class="archive-posts archive-month" data-date="000101">
-          <h5 class="archive-title" style="text-decoration: none;">January</h5>
-          
-            <li class="archive-post archive-day" data-date="00010101">
-              <a class="archive-post-title" href="/1/01/automl/">AutoML</a>
+            <li class="archive-post archive-day" data-date="20190209">
+              <a class="archive-post-title" href="/2019/02/imdb-top-250-tv-shows/">Imdb Top 250 TV Shows </a>
             </li>
           
         </ul>
@@ -286,6 +275,23 @@
           <div class="media">
             
             <div class="media-body">
+              <a class="link-unstyled" href="/2019/02/automl-in-h2o-r/">
+                <h3 class="media-heading">AutoML in H2o R</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Feb 2, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather">HUGOMORE42</div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
               <a class="link-unstyled" href="/2019/02/imdb-top-250-tv-shows/">
                 <h3 class="media-heading">Imdb Top 250 TV Shows </h3>
               </a>
@@ -295,24 +301,6 @@
                 </span>
               </span>
               <div class="media-content hide-xs font-merryweather">HUGOMORE42 Web Scraping of an Imdb Web Page ## loading all the packages required: library(rvest) ## Loading required package: xml2 library(splitstackshape) library(tidyr) library(data.table) library(ggplot2) library(scales)  Scraping and data preparation for a ranking graph url &lt;- &#39;https://www.imdb.com/chart/toptv/?ref_=nv_tvv_250&#39; # specifying url of a website to be scraped webpage &lt;- read_html(url) # reading the HTML code from website rank_data_html &lt;- html_nodes(webpage,&#39;.imdbRating , .titleColumn , .velocity&#39;) # using css selector to scrap data rank_data &lt;- html_text(rank_data_html) # Converting the ranking data to text head(rank_data) # check how data looks ## [1] &quot;\n 1.</div>
-            </div>
-            <div style="clear:both;"></div>
-            <hr>
-          </div>
-        
-          <div class="media">
-            
-            <div class="media-body">
-              <a class="link-unstyled" href="/1/01/automl/">
-                <h3 class="media-heading">AutoML</h3>
-              </a>
-              <span class="media-meta">
-                <span class="media-date text-small">
-                  Jan 1, 0001
-                </span>
-              </span>
-              <div class="media-content hide-xs font-merryweather">R Markdown This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.rstudio.com.
-When you click the Knit button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:</div>
             </div>
             <div style="clear:both;"></div>
             <hr>

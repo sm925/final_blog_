@@ -3,8 +3,14 @@ title: 'Imdb Top 250 TV Shows '
 author: Suchait Mattoo
 date: '2019-02-09'
 slug: imdb-top-250-tv-shows
-categories: []
-tags: []
+categories:
+  - Web Scraping
+  - Dot Ranking Graph
+tags:
+  - r
+  - imdb
+  - ggplot2
+  - rvest
 keywords:
   - tech
 ---
