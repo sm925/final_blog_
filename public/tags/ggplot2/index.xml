@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ggplot2 on </title>
+    <link>/tags/ggplot2/</link>
+    <description>Recent content in Ggplot2 on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 09 Feb 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/ggplot2/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Imdb Top 250 TV Shows </title>
+      <link>/2019/02/imdb-top-250-tv-shows/</link>
+      <pubDate>Sat, 09 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/02/imdb-top-250-tv-shows/</guid>
+      <description>HUGOMORE42 Web Scraping of an Imdb Web Page ## loading all the packages required: library(rvest) ## Loading required package: xml2 library(splitstackshape) library(tidyr) library(data.table) library(ggplot2) library(scales)  Scraping and data preparation for a ranking graph url &amp;lt;- &amp;#39;https://www.imdb.com/chart/toptv/?ref_=nv_tvv_250&amp;#39; # specifying url of a website to be scraped webpage &amp;lt;- read_html(url) # reading the HTML code from website rank_data_html &amp;lt;- html_nodes(webpage,&amp;#39;.imdbRating , .titleColumn , .velocity&amp;#39;) # using css selector to scrap data rank_data &amp;lt;- html_text(rank_data_html) # Converting the ranking data to text head(rank_data) # check how data looks ## [1] &amp;quot;\n 1.</description>
+    </item>
+    
+  </channel>
+</rss>

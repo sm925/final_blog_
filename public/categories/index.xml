@@ -11,11 +11,47 @@
     
     
     <item>
+      <title>Diabetes Prediction</title>
+      <link>/categories/diabetes-prediction/</link>
+      <pubDate>Tue, 12 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/diabetes-prediction/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Dot Ranking Graph</title>
+      <link>/categories/dot-ranking-graph/</link>
+      <pubDate>Sat, 09 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/dot-ranking-graph/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Healthcare</title>
+      <link>/categories/healthcare/</link>
+      <pubDate>Tue, 12 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/healthcare/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Machine Learning</title>
       <link>/categories/machine-learning/</link>
       <pubDate>Tue, 12 Feb 2019 00:00:00 +0000</pubDate>
       
       <guid>/categories/machine-learning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Web Scraping</title>
+      <link>/categories/web-scraping/</link>
+      <pubDate>Sat, 09 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/web-scraping/</guid>
       <description></description>
     </item>
     

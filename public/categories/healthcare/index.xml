@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Healthcare on </title>
+    <link>/categories/healthcare/</link>
+    <description>Recent content in Healthcare on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 12 Feb 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/categories/healthcare/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>AutoML in H2o R</title>
+      <link>/2019/02/automl-in-h2o-r/</link>
+      <pubDate>Tue, 12 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/02/automl-in-h2o-r/</guid>
+      <description>HUGOMORE42 ## loading packages required library(data.table) library(h2o) ## ## ---------------------------------------------------------------------- ## ## Your next step is to start H2O: ## &amp;gt; h2o.init() ## ## For H2O package documentation, ask for help: ## &amp;gt; ??h2o ## ## After starting H2O, you can use the Web UI at http://localhost:54321 ## For more information visit http://docs.h2o.ai ## ## ---------------------------------------------------------------------- ## ## Attaching package: &amp;#39;h2o&amp;#39; ## The following objects are masked from &amp;#39;package:data.table&amp;#39;: ## ## hour, month, week, year ## The following objects are masked from &amp;#39;package:stats&amp;#39;: ## ## cor, sd, var ## The following objects are masked from &amp;#39;package:base&amp;#39;: ## ## &amp;amp;&amp;amp;, %*%, %in%, ||, apply, as.</description>
+    </item>
+    
+  </channel>
+</rss>

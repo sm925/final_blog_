@@ -1,23 +1,25 @@
 ---
-title: AutoML in H2o R
-author: Suchait Mattoo
+title: "AutoML in H2o R"
+author: "Suchait Mattoo"
 date: '2019-02-12'
+keywords: tech
 slug: automl-in-h2o-r
-categories:
-  - Machine Learning
-  - Diabetes Prediction
-  - Healthcare
 tags:
-  - r
-  - automl
-  - h2o
-  - GGally
-  - ggcorr
-keywords:
-  - tech
+- r
+- automl
+- h2o
+- GGally
+- ggcorr
+categories:
+- Machine Learning
+- Diabetes Prediction
+- Healthcare
 ---
+<!--more-->
+  ```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
 
-##AutoML using H2o in R:
 
 ```{r}
 ## loading packages required

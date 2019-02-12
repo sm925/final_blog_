@@ -21,6 +21,33 @@
     </item>
     
     <item>
+      <title>Ggally</title>
+      <link>/tags/ggally/</link>
+      <pubDate>Tue, 12 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/ggally/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ggcorr</title>
+      <link>/tags/ggcorr/</link>
+      <pubDate>Tue, 12 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/ggcorr/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ggplot2</title>
+      <link>/tags/ggplot2/</link>
+      <pubDate>Sat, 09 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/ggplot2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>H2o</title>
       <link>/tags/h2o/</link>
       <pubDate>Tue, 12 Feb 2019 00:00:00 +0000</pubDate>
@@ -30,11 +57,29 @@
     </item>
     
     <item>
+      <title>Imdb</title>
+      <link>/tags/imdb/</link>
+      <pubDate>Sat, 09 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/imdb/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>R</title>
       <link>/tags/r/</link>
       <pubDate>Tue, 12 Feb 2019 00:00:00 +0000</pubDate>
       
       <guid>/tags/r/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Rvest</title>
+      <link>/tags/rvest/</link>
+      <pubDate>Sat, 09 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/rvest/</guid>
       <description></description>
     </item>
     
