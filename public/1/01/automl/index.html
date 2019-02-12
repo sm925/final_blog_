@@ -7,26 +7,26 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="generator" content="Hugo 0.53 with theme Tranquilpeak 0.4.3-SNAPSHOT">
 <meta name="author" content="Suchait Mattoo">
-<meta name="keywords" content="tech">
-<meta name="description" content="HUGOMORE42 Web Scraping of an Imdb Web Page ## loading all the packages required: library(rvest) ## Loading required package: xml2 library(splitstackshape) library(tidyr) library(data.table) library(ggplot2) library(scales)  Scraping and data preparation for a ranking graph url &lt;- &#39;https://www.imdb.com/chart/toptv/?ref_=nv_tvv_250&#39; # specifying url of a website to be scraped webpage &lt;- read_html(url) # reading the HTML code from website rank_data_html &lt;- html_nodes(webpage,&#39;.imdbRating , .titleColumn , .velocity&#39;) # using css selector to scrap data rank_data &lt;- html_text(rank_data_html) # Converting the ranking data to text head(rank_data) # check how data looks ## [1] &quot;\n 1.">
+<meta name="keywords" content="">
+<meta name="description" content="R Markdown This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.rstudio.com.
+When you click the Knit button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:">
 
 
-<meta property="og:description" content="HUGOMORE42 Web Scraping of an Imdb Web Page ## loading all the packages required: library(rvest) ## Loading required package: xml2 library(splitstackshape) library(tidyr) library(data.table) library(ggplot2) library(scales)  Scraping and data preparation for a ranking graph url &lt;- &#39;https://www.imdb.com/chart/toptv/?ref_=nv_tvv_250&#39; # specifying url of a website to be scraped webpage &lt;- read_html(url) # reading the HTML code from website rank_data_html &lt;- html_nodes(webpage,&#39;.imdbRating , .titleColumn , .velocity&#39;) # using css selector to scrap data rank_data &lt;- html_text(rank_data_html) # Converting the ranking data to text head(rank_data) # check how data looks ## [1] &quot;\n 1.">
+<meta property="og:description" content="R Markdown This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.rstudio.com.
+When you click the Knit button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Imdb Top 250 TV Shows ">
-<meta name="twitter:title" content="Imdb Top 250 TV Shows ">
-<meta property="og:url" content="/2019/02/imdb-top-250-tv-shows/">
-<meta property="twitter:url" content="/2019/02/imdb-top-250-tv-shows/">
+<meta property="og:title" content="AutoML">
+<meta name="twitter:title" content="AutoML">
+<meta property="og:url" content="/1/01/automl/">
+<meta property="twitter:url" content="/1/01/automl/">
 <meta property="og:site_name" content="">
-<meta property="og:description" content="HUGOMORE42 Web Scraping of an Imdb Web Page ## loading all the packages required: library(rvest) ## Loading required package: xml2 library(splitstackshape) library(tidyr) library(data.table) library(ggplot2) library(scales)  Scraping and data preparation for a ranking graph url &lt;- &#39;https://www.imdb.com/chart/toptv/?ref_=nv_tvv_250&#39; # specifying url of a website to be scraped webpage &lt;- read_html(url) # reading the HTML code from website rank_data_html &lt;- html_nodes(webpage,&#39;.imdbRating , .titleColumn , .velocity&#39;) # using css selector to scrap data rank_data &lt;- html_text(rank_data_html) # Converting the ranking data to text head(rank_data) # check how data looks ## [1] &quot;\n 1.">
-<meta name="twitter:description" content="HUGOMORE42 Web Scraping of an Imdb Web Page ## loading all the packages required: library(rvest) ## Loading required package: xml2 library(splitstackshape) library(tidyr) library(data.table) library(ggplot2) library(scales)  Scraping and data preparation for a ranking graph url &lt;- &#39;https://www.imdb.com/chart/toptv/?ref_=nv_tvv_250&#39; # specifying url of a website to be scraped webpage &lt;- read_html(url) # reading the HTML code from website rank_data_html &lt;- html_nodes(webpage,&#39;.imdbRating , .titleColumn , .velocity&#39;) # using css selector to scrap data rank_data &lt;- html_text(rank_data_html) # Converting the ranking data to text head(rank_data) # check how data looks ## [1] &quot;\n 1.">
+<meta property="og:description" content="R Markdown This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.rstudio.com.
+When you click the Knit button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:">
+<meta name="twitter:description" content="R Markdown This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.rstudio.com.
+When you click the Knit button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:">
 <meta property="og:locale" content="en-us">
 
   
-    <meta property="article:published_time" content="2019-02-09T00:00:00">
-  
-  
-    <meta property="article:modified_time" content="2019-02-09T00:00:00">
   
   
   
@@ -46,14 +46,14 @@
 
 
 
-    <title>Imdb Top 250 TV Shows </title>
+    <title>AutoML</title>
 
     <link rel="icon" href="/favicon.png">
     
 
     
 
-    <link rel="canonical" href="/2019/02/imdb-top-250-tv-shows/">
+    <link rel="canonical" href="/1/01/automl/">
 
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
@@ -211,15 +211,15 @@
             <div class="post-header main-content-wrap text-left">
   
     <h1 class="post-title" itemprop="headline">
-      Imdb Top 250 TV Shows 
+      AutoML
     </h1>
   
   
   <div class="postShorten-meta post-meta">
     
-      <time itemprop="datePublished" datetime="2019-02-09T00:00:00Z">
+      <time itemprop="datePublished" datetime="0001-01-01T00:00:00Z">
         
-  February 9, 2019
+  January 1, 1
 
       </time>
     
@@ -233,80 +233,24 @@
               
 
 
-
-
-HUGOMORE42
-
-<div id="web-scraping-of-an-imdb-web-page" class="section level2">
-<h2>Web Scraping of an Imdb Web Page</h2>
-<pre class="r"><code>## loading all the packages required:
-library(rvest)</code></pre>
-<pre><code>## Loading required package: xml2</code></pre>
-<pre class="r"><code>library(splitstackshape)
-library(tidyr)
-library(data.table)
-library(ggplot2)
-library(scales)</code></pre>
+<div id="r-markdown" class="section level2">
+<h2>R Markdown</h2>
+<p>This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <a href="http://rmarkdown.rstudio.com" class="uri">http://rmarkdown.rstudio.com</a>.</p>
+<p>When you click the <strong>Knit</strong> button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:</p>
+<pre class="r"><code>summary(cars)</code></pre>
+<pre><code>##      speed           dist       
+##  Min.   : 4.0   Min.   :  2.00  
+##  1st Qu.:12.0   1st Qu.: 26.00  
+##  Median :15.0   Median : 36.00  
+##  Mean   :15.4   Mean   : 42.98  
+##  3rd Qu.:19.0   3rd Qu.: 56.00  
+##  Max.   :25.0   Max.   :120.00</code></pre>
 </div>
-<div id="scraping-and-data-preparation-for-a-ranking-graph" class="section level1">
-<h1>Scraping and data preparation for a ranking graph</h1>
-<pre class="r"><code>url &lt;- &#39;https://www.imdb.com/chart/toptv/?ref_=nv_tvv_250&#39; # specifying url of a website to be scraped
-
-webpage &lt;- read_html(url) # reading the HTML code from website
-
-rank_data_html &lt;- html_nodes(webpage,&#39;.imdbRating , .titleColumn , .velocity&#39;) # using css selector to scrap data
-
-rank_data &lt;- html_text(rank_data_html) # Converting the ranking data to text
-
-head(rank_data) # check how data looks</code></pre>
-<pre><code>## [1] &quot;\n      1.\n      Planet Earth II\n        (2016)\n    &quot; 
-## [2] &quot;\n            9.5\n    &quot;                                 
-## [3] &quot;\n      2.\n      Band of Brothers\n        (2001)\n    &quot;
-## [4] &quot;\n            9.5\n    &quot;                                 
-## [5] &quot;\n      3.\n      Game of Thrones\n        (2011)\n    &quot; 
-## [6] &quot;\n            9.4\n    &quot;</code></pre>
-<div id="data-cleaning-and-preparing-for-a-ranking-graph" class="section level2">
-<h2>Data cleaning and preparing for a ranking graph</h2>
-<pre class="r"><code>rank_data &lt;- gsub(&quot;\n&quot;,&quot;&quot;, rank_data) # data-Preprocessing: removing \n
-rank_data &lt;- gsub(&quot; &quot;,&quot;&quot;,rank_data) # removing excess spaces
-head(rank_data) # another look at the genre data</code></pre>
-<pre><code>## [1] &quot;1.PlanetEarthII(2016)&quot;  &quot;9.5&quot;                   
-## [3] &quot;2.BandofBrothers(2001)&quot; &quot;9.5&quot;                   
-## [5] &quot;3.GameofThrones(2011)&quot;  &quot;9.4&quot;</code></pre>
-</div>
-<div id="preparation-contd." class="section level2">
-<h2>Preparation Contd.</h2>
-<pre class="r"><code>df &lt;- data.frame(Rank = rank_data) # creating a data frame
-df &lt;- cbind(head(df,-1), tail(df,-1)) # binding tv show and rankings
-required &lt;- seq(1, nrow(df), 2)
-df &lt;- df[required, ]
-colnames(df)[[2]] &lt;- &quot;imdb_rating&quot; # changing column name
-df &lt;- df %&gt;% separate(Rank, into = c(&#39;rank&#39;, &#39;tv_show&#39;), sep = 2) # seperating rank and tv show
-df &lt;- cSplit(df, &quot;tv_show&quot;, &quot;(&quot;) # splitting year into a different column
-setDT(df) # converting to dat.table
-setnames(df, &quot;tv_show_1&quot;, &quot;tv_show&quot;) # changing old column names to new ones
-setnames(df, &quot;tv_show_2&quot;, &quot;year&quot;)
-df[, year := gsub(&quot;)&quot;, &quot;&quot;, year)][, rank := 1:.N][, tv_show := as.character(tv_show)][, tv_show := ifelse(substr(tv_show, 1, 1) == &quot;.&quot;, sub(&quot;\\.&quot;, &quot;&quot;, tv_show), tv_show)] # changing data type of the columns and removing . from tv shows
-df &lt;- df[, c(&quot;rank&quot;, &quot;tv_show&quot;, &quot;imdb_rating&quot;, &quot;year&quot;)] # setting a column order
-df[, tv_show := ifelse(substr(tv_show, 2, 2) == &quot;.&quot;, gsub(&quot;^[^.]*.&quot;, &quot;&quot;, tv_show), tv_show)] # few tv shows still have . and number in it, cleaning it
-rm(list=setdiff(ls(), &quot;df&quot;)) # cleaning global dir
-df &lt;- cbind(df, as.numeric(as.character(factor(df$imdb_rating)))) # rating column to numeric
-df[, imdb_rating := NULL] # deleting column
-setnames(df, &quot;V2&quot;, &quot;imdb_rating&quot;)
-df[, year := NULL]
-head(df) # peek into final prepared data for a graph</code></pre>
-<pre><code>##    rank        tv_show imdb_rating
-## 1:    1  PlanetEarthII         9.5
-## 2:    2 BandofBrothers         9.5
-## 3:    3  GameofThrones         9.4
-## 4:    4    PlanetEarth         9.4
-## 5:    5    BreakingBad         9.4
-## 6:    6        TheWire         9.3</code></pre>
-</div>
-<div id="plotting-into-a-dot-ranking-graph" class="section level2">
-<h2>Plotting into a dot ranking graph</h2>
-<p><img src="/post/2019-02-09-imdb-top-250-tv-shows_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
-</div>
+<div id="including-plots" class="section level2">
+<h2>Including Plots</h2>
+<p>You can also embed plots, for example:</p>
+<p><img src="/post/automl_files/figure-html/pressure-1.png" width="672" /></p>
+<p>Note that the <code>echo = FALSE</code> parameter was added to the code chunk to prevent printing of the R code that generated the plot.</p>
 </div>
 
               
@@ -323,7 +267,7 @@ head(df) # peek into final prepared data for a graph</code></pre>
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--disabled">
+                <a class="post-action-btn btn btn--default tooltip--top" href="/2019/02/imdb-top-250-tv-shows/" data-tooltip="Imdb Top 250 TV Shows ">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -331,7 +275,7 @@ head(df) # peek into final prepared data for a graph</code></pre>
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="/1/01/automl/" data-tooltip="AutoML">
+                <a class="post-action-btn btn btn--disabled">
               
                   <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
                   <i class="fa fa-angle-right"></i>
@@ -349,19 +293,19 @@ head(df) # peek into final prepared data for a graph</code></pre>
         </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=/2019/02/imdb-top-250-tv-shows/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=/1/01/automl/">
               <i class="fa fa-facebook-official"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=/2019/02/imdb-top-250-tv-shows/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=/1/01/automl/">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=/2019/02/imdb-top-250-tv-shows/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=/1/01/automl/">
               <i class="fa fa-google-plus"></i>
             </a>
           </li>
@@ -409,7 +353,7 @@ head(df) # peek into final prepared data for a graph</code></pre>
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--disabled">
+                <a class="post-action-btn btn btn--default tooltip--top" href="/2019/02/imdb-top-250-tv-shows/" data-tooltip="Imdb Top 250 TV Shows ">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -417,7 +361,7 @@ head(df) # peek into final prepared data for a graph</code></pre>
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="/1/01/automl/" data-tooltip="AutoML">
+                <a class="post-action-btn btn btn--disabled">
               
                   <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
                   <i class="fa fa-angle-right"></i>
@@ -435,19 +379,19 @@ head(df) # peek into final prepared data for a graph</code></pre>
         </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=/2019/02/imdb-top-250-tv-shows/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=/1/01/automl/">
               <i class="fa fa-facebook-official"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=/2019/02/imdb-top-250-tv-shows/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=/1/01/automl/">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=/2019/02/imdb-top-250-tv-shows/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=/1/01/automl/">
               <i class="fa fa-google-plus"></i>
             </a>
           </li>
@@ -477,19 +421,19 @@ head(df) # peek into final prepared data for a graph</code></pre>
   <ul class="share-options">
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=%2F2019%2F02%2Fimdb-top-250-tv-shows%2F">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=%2F1%2F01%2Fautoml%2F">
           <i class="fa fa-facebook-official"></i><span>Share on Facebook</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=%2F2019%2F02%2Fimdb-top-250-tv-shows%2F">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=%2F1%2F01%2Fautoml%2F">
           <i class="fa fa-twitter"></i><span>Share on Twitter</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=%2F2019%2F02%2Fimdb-top-250-tv-shows%2F">
+        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=%2F1%2F01%2Fautoml%2F">
           <i class="fa fa-google-plus"></i><span>Share on Google&#43;</span>
         </a>
       </li>
@@ -642,9 +586,9 @@ $(document).ready(function() {
     
       <script>
         var disqus_config = function () {
-          this.page.url = '\/2019\/02\/imdb-top-250-tv-shows\/';
+          this.page.url = '\/1\/01\/automl\/';
           
-            this.page.identifier = '\/2019\/02\/imdb-top-250-tv-shows\/'
+            this.page.identifier = '\/1\/01\/automl\/'
           
         };
         (function() {
