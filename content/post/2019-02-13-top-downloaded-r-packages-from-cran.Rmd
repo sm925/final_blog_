@@ -1,0 +1,48 @@
+---
+title: "Top Downloaded R Packages From CRAN"
+author: "Suchait Mattoo"
+date: '2019-02-13'
+keywords: tech
+slug: top-downloaded-r-packages-from-cran
+tags:
+- r
+- shiny
+- word cloud
+categories: Data Visualization
+runtime: shiny
+---
+```{r}
+# devtools::install_github("metacran/cranlogs")
+
+# load all the packages required
+library(data.table)
+library(wordcloud2)
+library(cranlogs)
+library(shiny)
+
+df <- cranlogs::cran_top_downloads(when = "last-week", count = 100) # pulling r packages download data
+#top100 <- cranlogs::cran_top_downloads(count = 100)$package
+setDT(df)
+setnames(df, "package", "word")
+setnames(df, "count", "freq")
+df <- df[, c("word", "freq")] # prepared data for word cloud
+#wordcloud2::wordcloud2(df)
+
+n <- 1
+
+# Define the UI
+ui <- bootstrapPage(
+  numericInput('size', 'Size of wordcloud', n),
+  wordcloud2Output('wordcloud2')
+)
+
+
+# Define the server code
+server <- function(input, output) {
+  output$wordcloud2 <- renderWordcloud2({
+    wordcloud2(df, size = input$size)
+  })
+}
+# Shiny app object
+shinyApp(ui = ui, server = server)
+```

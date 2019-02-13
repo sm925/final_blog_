@@ -1,0 +1,51 @@
+---
+title: "Top Downloaded R Packages From CRAN"
+author: "Suchait Mattoo"
+date: '2019-02-13'
+keywords: tech
+slug: top-downloaded-r-packages-from-cran
+tags:
+- r
+- shiny
+- word cloud
+categories: Data Visualization
+runtime: shiny
+---
+
+
+
+<pre class="r"><code># devtools::install_github(&quot;metacran/cranlogs&quot;)
+
+# load all the packages required
+library(data.table)
+library(wordcloud2)
+library(cranlogs)
+library(shiny)
+
+df &lt;- cranlogs::cran_top_downloads(when = &quot;last-week&quot;, count = 100) # pulling r packages download data</code></pre>
+<pre><code>## No encoding supplied: defaulting to UTF-8.</code></pre>
+<pre class="r"><code>#top100 &lt;- cranlogs::cran_top_downloads(count = 100)$package
+setDT(df)
+setnames(df, &quot;package&quot;, &quot;word&quot;)
+setnames(df, &quot;count&quot;, &quot;freq&quot;)
+df &lt;- df[, c(&quot;word&quot;, &quot;freq&quot;)] # prepared data for word cloud
+#wordcloud2::wordcloud2(df)
+
+n &lt;- 1
+
+# Define the UI
+ui &lt;- bootstrapPage(
+  numericInput(&#39;size&#39;, &#39;Size of wordcloud&#39;, n),
+  wordcloud2Output(&#39;wordcloud2&#39;)
+)
+
+
+# Define the server code
+server &lt;- function(input, output) {
+  output$wordcloud2 &lt;- renderWordcloud2({
+    wordcloud2(df, size = input$size)
+  })
+}
+# Shiny app object
+shinyApp(ui = ui, server = server)</code></pre>
+<iframe data-deferred-src="app96691ded7733c167611352221a0d6b35/?w=&amp;__subapp__=1" width="100%" height="400" class="shiny-frame shiny-frame-deferred"></iframe>
